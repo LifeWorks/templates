@@ -1,0 +1,56 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+As a summary this work has made a careful and systematic study on the multifractal characteristics at the critical point and in the critical regime of the electronic state within the Anderson model of localisation using high-precision data and very large system sizes.  It has demonstrated that the best strategy to obtain a complete picture of the multifractal spectrum, which contains negative fractal dimensions and shows the contributions coming from the tails of the distribution, and to find better agreement with the proposed symmetry in the multifractal exponents is to use system-size scaling with ensemble averaging in which to specifically consider a sensible range of system sizes with very large number of states.
+From the multifractal analysis, we extract information about critical properties of the Anderson transition such as the following: validity of the symmetry relation in the multifractal exponents and probability distribution function (PDF) of wavefunction intensities, existence of rare events which give rise to negative fractal dimensions, critical disorder and critical exponent which describes the divergence of the correlation length near the critical point.  The multifractal analysis has also allowed us to comment and give speculations about the non-parabolicity of the multifractal spectrum, non-Gaussian nature of the PDF and possibility of termination points in the $f(\alpha)$.  Lastly, this work has proposed an alternative method that is numerically simpler to obtain the multifractal spectrum from the PDF of wavefunction intensities.
+
+In the following, we highlight the important results of this work.
+
+\begin{enumerate}
+
+\item 
+Using state of the art diagonalization technique for sparse matrices, we have reached very large system sizes of up to 		
+$L^3=240^3$ which corresponds to wavefunction sites of $1.4\times 10^7$.  The statistics involved in this work is unprecedented.  
+At the approximated critical point, we have used $\sim 5\times 10^4$ states for $L\leqslant100$ and $\sim 100$ states for $L> 100$.  
+In the critical regime corresponding to disorder values from $15.0$ to $18.0$, we have taken at least $10000$ uncorrelated samples for each size $L\in [20,30,\cdots,100]$ and disorder combination, for a total of $1,530,000$ wave functions.
+%
+The huge statistics involved here have allowed us to reach regimes such as the tails of the multifractal spectrum that are highly sensitive to finite size effects and number of disorder realizations.
+
+\item
+The study has given an in-depth analysis on the role of different averaging and the effect of system- and box- size scaling to the shape of the critical multifractal spectrum.  The latter scaling approach is necessary to estimate the behaviour in the thermodynamic limit that is being reached faster by using system-size scaling which by varying $L$ considers different disorder realizations and reduces finite size effects.
+%
+In using a typical average which is dominated by a single representative site, an increase of disorder realization will only change the $f(\alpha)$ shape up to a point but increasing $L$ will cause the $f(\alpha)$ to shift towards the left, i.e., lower values of $\alpha^{typ}$ and $f^{typ}$.
+%
+On the other hand, the $f^{ens}(\alpha)$ obtained from the use of ensemble average which considers contributions from all disorder realizations equally is shown to be dependent on the number of disorder realizations.  Furthermore, it gives a complete profile of the spectrum because it contains information about negative fractal dimensions which is lost with typical averaging.  The study has demonstrated that for a fixed $L$,
+$f^{ens}(\alpha)$ reaches more negative values upon an increase in disorder realizations.  Since the regions of the negative fractal dimension is caused by the so-called rare events of whose number decreases with $L$, an increase in $L$ must be accompanied with an increase in the disorder realizations to see the same extent of negative fractal dimensions.
+
+\item
+This work has demonstrated the validity of a proposed symmetry relation in the multifractal exponents in the 3D Anderson Model within the orthogonal universality class.  The statistical analysis have shown that the symmetry relation is true in the thermodynamic limit since better agreement to the symmetry relation is satisfied whenever higher number of disorder realizations and larger system sizes are considered.  
+Better agreement to the symmetry is found whenever the $f(\alpha)$ reaches more negative values, $\alpha$ moves closer to zero and the right $f(\alpha)$ satisfies the upper limit of $\alpha\leq 2d$
+The best strategy to satisfy the symmetry to use system-size scaling with ensemble averaging in which to specifically consider a sensible range of system sizes with very large number of states.
+
+\item
+In pursuit of a numerical optimisation of the box-scaling technique we discuss  different box-partitioning schemes including cubic and non-cubic boxes, use of periodic boundary conditions to enlarge the system and single and multiple origins  for the partitioning grid are also implemented.  We show that the numerically most reliable method is to divide a system of linear size $L$ equally into cubic boxes of size $l$ for which $L/l$ is an integer. This method is the least numerically expensive while having a good reliability.
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossaryentryfield{symb:Lambda}{\glsnamefont{$\lambda $}}{Lambda indicates usually an eigenvalue in linear algebra}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{41}}}%
+\glossaryentryfield{symb:Phi}{\glsnamefont{$\varphi $}}{An angle}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{41}}}%
+\glossaryentryfield{symb:Pi}{\glsnamefont{$\pi $}}{A mathematical constant whose value is the ratio of any circle's circumference to its diameter}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter{page}\glsnumberformat{41}}}%
+\end{theglossary}\glossarypostamble

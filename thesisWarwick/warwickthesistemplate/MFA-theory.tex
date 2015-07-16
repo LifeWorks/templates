@@ -1,0 +1,346 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% $Log: MFA-theory.tex,v $
+% Revision 1.7  2010/03/26 18:56:10  phrfar
+% *** empty log message ***
+%
+% Revision 1.6  2010/03/24 16:12:00  phrfar
+% edited, revised
+%
+% Revision 1.5  2010/03/11 19:37:10  phrfar
+% *** empty log message ***
+%
+% Revision 1.4  2010/03/10 18:37:13  phrfar
+% almost finished here
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Theory of Multifractal Analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mass Exponents and Generalized Dimensions}
+\label{sec-gIPR}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We start by considering the distribution of the normalized wavefunction
+intensities $\vert\psi\vert^2$ in the multifractal electronic state at the
+critical point of the Anderson metal to insulator transition.  Using the usual
+box counting method, we extract the multifractal properties of this
+wavefunction.   Let  $\vert\psi_i\vert^2$ be the value of the wavefunction
+intensity at the $i$-th site in a discretized $d$-dimensional system with volume
+$L^d$.
+If we cover the system equally with $N_l$ boxes each with linear size $l$, the
+probability to find the electron in the $k$-th box is simply given by
+%
+\begin{equation}
+	\mu_k(l)=\sum_{i=1}^{l^d} \vert\psi_i\vert^2,\quad k=1,\ldots,N_l.
+	\label{eq-mudef}
+\end{equation}
+%
+The box probability $\mu_k(l)$ constitutes the normalized measure
+$\sum_{\mathrm{all~boxes}} \mu_k(l)=1$.
+In the limit that $l\rightarrow 1$ (i.e., $l$ is equal to the lattice spacing),
+the box probability reduces to the $\vert\psi_i\vert^2$.
+The sum of the moments of the box probability over all boxes in the volume
+%
+\begin{equation}
+ 	P_q (l)=\sum_{k=1}^{N_l}\mu_k^q(l),
+	\label{eq-IPRdef}
+\end{equation}
+%
+is called the generalized inverse-participation ratios (gIPR).  The gIPR serve
+as a $q$-microscope to effectively probe the fluctuations in
+$\vert\psi_i\vert^2$.  The positive $q$ enhances the contribution coming from
+the large $\vert\psi_i\vert^2$ while the negative $q$ is a region where the
+small $\vert\psi_i\vert^2$ dominate.  For $q=2$, the gIPR is simply
+the usual IPR $P_2=\sum_i \vert\psi_i\vert^4$ which is inversely proportional to the
+number of sites contributing to a state.
+
+
+The general assumption underlying multifractality is that within a certain range
+of values for the ratio $\lambda\equiv l/L$, the moments
+$P_q$ show a power-law behaviour indicating the absence of length scales in the
+system,\cite{Jan94a}
+%
+\begin{equation}
+	\label{eq-IPRscale}
+	P_q (\lambda)\propto\lambda^{\tau(q)}.
+\end{equation}
+%
+The exponent $\tau(q)$ is the mass exponent and is defined as
+%
+\begin{equation}
+ 	\tau(q)=\lim_{\lambda\rightarrow0}
+\frac{\mathrm{log}~P_q(\lambda)}{\mathrm{log}~\lambda},
+\end{equation}
+where the limits states that the true value of $\tau(q)$ at
+criticality is in the thermodynamic limit $\lambda\rightarrow0$.
+The values for $\tau(q)$ in the limiting cases of weak and strong disorder and
+at the MIT are
+%
+\begin{equation}
+	\tau(q) = 
+	\begin{array}{ll}
+	d (q-1) & \textrm{for metals,}\\
+	0 & \textrm{for insulators }(q>0),\\
+	D_q (q-1) & \textrm{at the MIT}.
+	\end{array}
+\end{equation}
+%
+In an extended metallic state where the wavefunction intensity is uniformly
+distributed as $\vert\psi_i\vert^2\propto L^{-d}$ and $d$ is the dimension of
+the support, $P_q$ is a linear function of $q$ with slope $d=3$ for a $3D$
+system.  For a strong disorder state where the wavefunction is highly localized
+within one small spatial region, $P_q=1$ for all positive $q$'s and hence $\tau=0$.  An
+indication that a state is multifractal is when $\tau(q)$ is a nonlinear
+function of $q$.  Generally, $\tau(q)$ is a non-decreasing convex function.
+At criticality, $\tau(q)$ can also be parametrized as
+$\tau(q)=d(q-1)+\Delta_q$, where $\Delta_q$ are the anomalous scaling exponents
+characterizing the critical point \cite{EveMM08}.  Furthermore, from
+Eqs.~\eqref{eq-IPRdef} and \eqref{eq-IPRscale} it is easy to see that $\tau(0)=-d$
+and due to the normalization condition $\tau(1)=0$.
+
+
+The values of $\tau(q)$ will give the set of generalized dimensions $D_q$ that
+defines the multifractal system.  To show that this is the case, we consider for
+the present purpose a uniform distribution of $\vert\psi_i\vert^2$ on a support
+with fractal dimension $D_f$.  Using the normalization condition, we can say
+that the box probability can be expressed as $\mu_k(l)\propto l^{D_f}L^{-D_f}$
+since $\vert\psi_i\vert^2\propto L^{-D_f}$ and the number of sites in a box is
+proportional to $l^{D_f}$.
+Take note that the assumption of normal distribution for $\vert\psi\vert^2$
+allows the relation $\vert\psi_i\vert^2\propto L^{-D_f}$ to be valid for all $q$
+and that $D_f$ to be independent of $q$.  The gIPR can then be reformulated as
+%
+\begin{equation}
+	\label{eq-IPRDq}
+ 	P_q(\lambda)\propto\lambda^{D_f(q-1)},
+\end{equation}
+%
+where the summation in Eq.~\eqref{eq-IPRdef} is replaced by the number of boxes
+$N_l=(\frac{L}{l})^{D_f}$.
+Comparing equations \eqref{eq-IPRscale} and \eqref{eq-IPRDq}, we can see that
+$\tau(q)=D_f (q-1)$.  If the distribution of the measure is not normal such that
+the fractal dimension depends on $q$ then $\tau(q)=D_q (q-1)$.  The set of
+generalized fractal dimensions is then given as
+%
+\begin{equation}
+ D_q=\frac{1}{q-1}\lim_{\lambda\rightarrow0}\frac{\mathrm{log}~P_q(\lambda)}{
+\mathrm{log}~\lambda}. \end{equation}
+%
+$D_q$ is a monotonically decreasing positive function of $q$
+As with $\tau(q)$, the $q$-dependence of $D_q$ is an indication of multifractality.
+The physical meaning of some of the dimensions will be given here.  For $q=0$,
+$D_0$ is equal to the dimension of the support of the measure.  $D_1$ is
+equivalent to the information dimension of the system which is in statistical
+mechanics related to the entropy of the probability distribution of box
+probabilities $S_\lambda=-\sum_{N_l}\mu_k(\lambda)\mathrm{log}\mu_k(\lambda)$. 
+The generalized dimension corresponding to $q=2$ is related to the correlation
+dimension that for a system partitioned into boxes gives the probability that the distance between two points in the state is
+less than the box size.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relation between the Mass Exponents and Singularity Spectrum}
+\label{sec-tau&falph}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  meaning of "scales as "
+
+We shall demonstrate that the mass exponents $\tau(q)$ are related to a set of fractal dimensions
+called the singularity spectrum $f(\alpha)$ and that they
+are exactly equivalent such that a multifractal state is completely
+defined by either one of them.
+Again, we consider the multifractal distribution of the wavefunction intensities
+with volume $L^d$ and we divide it into boxes of length $l$.  If we take one box
+probability $\mu_1$, we will find that its value will have a $\lambda$ dependence as
+$\mu_1(\lambda)\sim\lambda^{\alpha_1}$ to some exponent $\alpha_1$.  Another
+box would scale to another exponent as $\mu_2(\lambda)\sim\lambda^{\alpha_2}$.  In fact, different boxes scale
+to different exponents $\alpha$.  Furthermore, the number of these boxes, $N_{\alpha'}$, corresponding to
+the same $\alpha=\alpha'$ scales as $N_{\alpha'}\propto\lambda^{-f(\alpha')}$.  The set of boxes that scale to the same $\alpha=\alpha'$ is a fractal with a fractal dimension of $f(\alpha')$.  A multifractal state such as the electronic state at the MIT is completely defined by a an infinite set of $f(\alpha)$ values which is called the singularity spectrum.
+
+The ensemble (arithmetic) average of the generalized inverse participation ratios in terms of the probability density function (PDF) of the box probability $\mathcal{P}(\mu_k)$ is given by
+%
+\begin{equation}
+\label{eq-IPRasPDF1}
+ \lambda^{-d}\langle\mu_k^q(\lambda)\rangle=\lambda^{-d}\int_0^1 \mathcal{P}(\mu_k)~\mu_k^q(\lambda)~\ud \mu_k,
+\end{equation}
+%
+where the average is over all disorder realizations and over the lattice volume $L^d$.  The normalization of $\mu_k(\lambda)$ gives the limits of the integration. 
+We make a change of variables, $\mathcal{P}(\mu_k)\ud\mu_k=\mathcal{P}(\alpha)\ud\alpha$.  In terms of $\alpha$, we parametrize the box probability to be $\mu_k(\lambda)\equiv \lambda^\alpha$ and its logarithmic form is $\alpha\equiv\ln\mu_k/\ln\lambda$.  When $l=1$, the box probability reduces to the wavefunction intensity that is given by $\vert\psi_i\vert^2\equiv L^{-\alpha}$.
+Furthermore, $\mu_k^q(\lambda)=\lambda^{\ln_\lambda \mu_k^q}=\lambda^{q\frac{\ln\mu_k}{\ln\lambda}}$.  Equation \eqref{eq-IPRasPDF1} becomes
+%
+\begin{equation}
+\label{eq-IPRasPDF2}
+ \lambda^{-d}\langle\mu_k^q(\lambda)\rangle=\lambda^{-d}\int_0^\infty \mathcal{P}(\alpha)~\lambda^{q\alpha}~\ud\alpha.
+\end{equation}
+%
+In terms of the PDF $\mathcal{P}(\alpha)$, the number of boxes having the same values of $\mu_k=\lambda^\alpha$ is $N_\alpha=\mathcal{P}(\alpha)\ud\alpha\cdot \lambda^{-d}\propto \lambda^{-f(\alpha)}$.  Hence, using $\mathcal{P}(\alpha)\propto \lambda^{d-f(\alpha)}$ into Eq.~\eqref{eq-IPRasPDF2} we have
+%
+\begin{eqnarray}
+\label{eq-IPRasPDF3}
+ \lambda^{-d}\langle\mu_k^q(\lambda)\rangle & \propto & \int_0^\infty \lambda^{q\alpha-f(\alpha)}~\ud\alpha \nonumber\\
+					    & \propto & \int_0^\infty e^{\ln\lambda\cdot \tilde{F}(\alpha)}~\ud\alpha,
+\end{eqnarray}
+%
+where $\tilde{F}(\alpha)=q\alpha-f(\alpha)$.  We evaluate the above integral using the saddle-point method which is justified in the limit of large $L$ or small $\lambda$.  The saddle-point method requires that the function $\tilde{F}(\alpha)$ must have a unique global maximum at some $\alpha=\tilde{\alpha}$, i.e, $\tilde{F}''(\tilde{\alpha})<0$, and that $\tilde{\alpha}$ is not an end point in the integration interval.  
+Solving the integral of Eq.~\eqref{eq-IPRasPDF3} reproduces the scaling relation in \eqref{eq-IPRscale} and gives the following relations
+%
+%
+\begin{equation}
+\label{eq-qdef}
+ q=f'(\tilde{\alpha}),
+\end{equation}
+%
+\begin{equation}
+ \label{eq-falphadef}
+ \tau(q)=q\tilde{\alpha}-f(\tilde{\alpha}),\qquad 
+ f(\tilde{\alpha})=q\tilde{\alpha}-\tau(q).
+\end{equation}
+%
+Furthermore using Eq.~\eqref{eq-falphadef} into Eq.~\eqref{eq-qdef}, we will obtain
+%
+\begin{equation}
+ q=q+\tilde{\alpha}\frac{\ud q}{\ud\alpha}-\frac{\ud\tau}{\ud q}\frac{\ud q}{\ud\alpha},
+\end{equation}
+which gives the values of the singularity strength or the Lipschitz-H$\ddot{o}$lder exponent to be
+%
+\begin{equation}
+ \label{eq-alphadef}
+ \tilde{\alpha}_q=\frac{\ud\tau(q)}{\ud q}.
+\end{equation}
+%
+Equations \eqref{eq-qdef} to \eqref{eq-alphadef} state that $f(\alpha)$ is just the Legendre transformation of $\tau(q)$.
+Furthermore, since $q=f'(\tilde{\alpha})$ then the maximum of the singularity spectrum can exactly be found at $q=0$.
+
+
+The singularity spectrum $f(\alpha)$ is a convex function of $\alpha$.  
+A pictorial sketch of the properties of $f(\alpha)$ is shown in Fig.~\ref{fig-sexyfalfa}.
+%
+\begin{figure}
+ 	\includegraphics[width=\figwidth]{fig-sexyfalfa.eps}
+	\caption[Pictorial representation of the general features of the multifractal spectrum at criticality.]{Pictorial representation of the general features of the multifractal spectrum at criticality. The dotted purple areas highlight forbidden regions for $f(\alpha)$.
+		Each point on the spectrum corresponds exactly to an evaluation of a $q$-moment of the gIPR.
+		The maximum is found at the point $q=0$ where $f(\alpha_0)=d$.  At $q=1$, $f(\alpha_1)=\alpha_1$ and $f'(\alpha_1)=1$.
+		The two regions to the right and left of $q=1/2$ are determined by different  wavefunction amplitudes, $|\psi_i|^2 > L^{-d}$ (white) and $|\psi_i|^2<L^{-d}$ (yellow).
+                The symmetry axis at $q=1/2$ is highlighted and here $f(\alpha_{1/2}=d)=d-\Delta_{1/2}$.
+		The yellow shaded area can be connected to the white area via the symmetry relation \eqref{eq-symalfaq},\eqref{eq-symfalfa}, and vice versa.
+		The points corresponding to $q=0$ and $q=1$ are symmetry related points.}
+	\label{fig-sexyfalfa}
+\end{figure}
+%
+Due to the normalization condition of $\vert\psi_i\vert^2$, $f(\alpha)$ is only defined on a semi-axis $\alpha\geq0$.  It has its maximum at $\alpha_0 \geqslant d$ where $f(\alpha_0)=d$.  Since nowhere in the wavefunction will $\vert\psi_i\vert^2=0$, $d$ is simply the topological dimension.  As previously shown, $\alpha_0$ corresponds exactly to the moment $q=0$ evaluation of the gIPR.  To the right of $\alpha_0$ is the region of negative $q$'s where the contributions coming from small wavefunction intensities $\vert\psi_i\vert^2<L^{-d}$ are dominant.  The left region at $\alpha<\alpha_0$ of the singularity spectrum is the positive $q$'s area that is being populated by large $\vert\psi_i\vert^2>L^{-d}$.
+For $\alpha_1$ that corresponds to $\tau(1)=0$, we have $f(\alpha_1)=\alpha_1$ and $f^\prime (\alpha_1)=1$. 
+In the limit of vanishing disorder the singularity spectrum becomes narrower and
+eventually converges to one point $f(d)=d$. On the other hand, as the value of
+disorder increases the singularity spectrum broadens and
+in the limit of strong localisation the singularity spectrum tends to converge
+to the points:  $f(0)=0$ and $f(\infty)=d$.
+Only at the MIT we can have a true multifractal behaviour and as a consequence
+the singularity spectrum must be independent of all length scales, such as
+the system size.
+%% insert f(alpha) figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parabolic Approximations to the $f(\alpha)$}
+\label{sec-parabola}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+From an analytical viewpoint not much is known about how the singularity spectrum should look like at criticality.  However, an approximate expression for the $f(\alpha)$ has been put forward that is valid in the regime of weak multifractality, i.e.\ when the critical point is close to a metallic behaviour.
+This applies to the Anderson transition in $d=2+\epsilon$ dimensions with $\epsilon \ll 1$. In this case a parabolic dependence of the singularity spectrum is found to be \cite{Weg89}
+%
+\begin{equation}
+ f(\alpha) \simeq d-\frac{\left[\alpha -(d+\epsilon)\right]^2}{4\epsilon}.
+ \label{eq-parabola}
+\end{equation}
+%
+Equation \eqref{eq-parabola} implies a corresponding approximation for the anomalous dimensions as given by $\Delta_q\simeq -\epsilon q(q-1)$. 
+For the case of $d=2+1$, we have $f(\alpha)=d-(\alpha-\alpha_0)^2/4$.
+This parabolic approximation for the $f(\alpha)$, apart from the dimension of the support $d$, only depends on one parameter $\alpha_0$ that is exactly $\alpha_0=4$ for $d=2+1$ case and that defines the position of the maximum $f(\alpha_0)=d$.  Generally, equation \eqref{eq-parabola} provides a very good approximation to the critical $f(\alpha)$ near $\alpha=\alpha_0$ and deviates from the true $f(\alpha)$ at $\alpha$ values far away from $\alpha_0$.
+Due to the normalization condition of the wavefunction intensities, we have to impose the condition $\alpha\geqslant0$ to Eq.~\eqref{eq-parabola}.  In the limit of $\alpha=0$ such that $\alpha=\frac{\ud\tau(q)}{\ud q}=0$, the mass exponent $\tau(q)$ should approach a constant value as $q\rightarrow q_c$ where critical $q_c$ corresponds to $\alpha_{q_c}=0$.
+Therefore, the parabolic $f(\alpha)$ should terminate at $\alpha=0$ with a finite value.  This behaviour is known as the termination of the multifractal spectrum.
+%However, the exact parabolicity fails in the limit of $q\rightarrow\infty$ when $q=f'(\alpha)=\infty$.  That is when $f(\alpha)$ approaches $\alpha=0$ with an infinite slope and $f(\alpha=0)=-\infty$.  This scenario is equivalent to the situation when $\tau(q)$ continues to increase for $q\rightarrow\infty$.
+Whether the $f(\alpha)$ at $\alpha=0$ terminates or continues to negative infinity will be further discussed later on.
+Although the parabolic approximation has turned out to be exact for some models \cite{LudFSG94} its validity, in particular  for the integer quantum Hall transition, is currently under an intense debate \cite{ObuSFGL08} due to the implications that this result has upon the critical theories describing the transition.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Symmetry Relations in the Multifractal Spectrum at the Anderson Transition}
+\label{sec-symmetry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Recently, the existence of exact symmetry relations in the multifractal exponents of the Anderson transition has been reported \cite{MirFME06}.
+The mass exponents that describe the scaling of the generalized inverse participation ratio in Eq.~\eqref{eq-IPRscale} can be defined at criticality to be $\tau(q)=d(q-1)+\Delta q$.
+The anomalous exponents $\Delta_q$ separate the critical point from the metallic phase for which $\Delta_q=0$.
+Furthermore, $\Delta_q$ determine the scale dependence of the moments of the local density of states (LDOS) $\rho^q$ \cite{EveMM08} that is expressed as 
+%
+\begin{equation}
+\label{eq-LDOSscale}
+\langle\rho^q\rangle\propto L^{-\Delta_q}. 
+\end{equation}
+%
+Previous works have suggested a symmetry relation in the distribution function of LDOS $\mathcal{P}_\rho(\tilde{\rho})$ as given by
+%
+\begin{equation}
+ \label{eq-symPDFLDOS}
+ \mathcal{P}_\rho(\tilde{\rho})=\tilde{\rho}^{-3}\mathcal{P}_\rho(\tilde{\rho}^{-1}),
+\end{equation}
+%
+where $\tilde{\rho}=\rho/\langle\rho\rangle$ is the normalized LDOS.
+Since $\langle\tilde{\rho}^q\rangle=\int \ud\tilde{\rho}~\tilde{\rho}^q~\mathcal{P}_\rho(\tilde{\rho})$, Eq.~\eqref{eq-symPDFLDOS} implies the relation $\langle\tilde{\rho}^q\rangle=\langle\tilde{\rho}^{1-q}\rangle$ which from Eq.~\eqref{eq-LDOSscale} in turn gives
+%
+\begin{equation}
+\label{eq-symDeltaq}
+ \Delta_q = \Delta_{1-q}.
+\end{equation}
+%
+Equation \eqref{eq-symPDFLDOS} has been derived using a supersymmetric nonlinear $\sigma$ model \cite{MirF94} that is able to approximately model the critical properties of the Anderson transition for the case of weak disorder but breaks down for strong disorder.
+It has been argued that although the mapping of the Anderson model onto the nonlinear $\sigma$ model is not exact, there exist several microscopic models (e.g., $N$-orbital Wegner model for $N\rightarrow\infty$) for the Anderson transition that can be reduced exactly to the nonlinear $\sigma$ model.  The universality of the critical exponents permits the validity of the symmetry relation \eqref{eq-symDeltaq} in the multifractal exponent $\Delta_q$ on any microscopic model of criticality.
+
+In terms of the mass exponents and $\tau(1-q)=d(1-q-1)+\Delta_{1-q}$, Eq.~\eqref{eq-symDeltaq} can also be written as
+%
+\begin{equation}
+\label{eq-symTauq}
+ \tau(q)-\tau(1-q)=d(2q-1).
+\end{equation}
+%
+Equations \eqref{eq-symDeltaq} and \eqref{eq-symTauq} reveal the existence of the symmmetry axis at $q=1/2$.
+Furthermore, expressing $\tau(q)$ in its Legendre transform of $f(\alpha_q=\frac{\ud\tau_q}{\ud q})$ and since $-\alpha_{1-q}=\frac{\ud\tau_{1-q}}{\ud (1-q)}\frac{\ud (1-q)}{\ud q}$, the corresposponding symmetry relations are given by
+%
+\begin{equation}
+ 	\alpha_q + \alpha_{1-q} = 2d,
+	\label{eq-symalfaq}
+\end{equation}
+%
+\begin{equation}
+ 	f(2d-\alpha) = f(\alpha) +d -\alpha.
+	\label{eq-symfalfa}
+\end{equation}
+%
+Equation \eqref{eq-symfalfa} follows from using the relations \eqref{eq-symTauq} and \eqref{eq-symalfaq} into the definition of $f(\alpha_{1-q})=(1-q)\alpha_{1-q}-\tau_{1-q}$.  In Fig.~\ref{fig-sexyfalfa}, we highlight the symmetry points and relations in the critical multifractal spectrum.
+
+
+We shall look at the implications of these symmetry relations on the multifractal spectrum.
+%
+%
+%  DISCUSS  !!!!!!!!!!!!!
+%  situations where symmetry is not valid nor satisfied
+%  termination points, freezing
+% slope of f(alpha) at q-> infntt  at the TAILS depending on typical or ensemble
+%
+%
+The wave function normalization condition gives the lower bound $\alpha_{\mathrm{min}}=0$ for the singularity strength and requires that $\alpha$ is always positive.
+It readily follows from the symmetry in \eqref{eq-symalfaq} that in the limit of $\alpha_{q\rightarrow+\infty}$ then $\alpha_{q\rightarrow+\infty}+\alpha_{q\rightarrow-\infty}=2d$ which means that $\alpha$ should only be contained in the interval $[0,2d]$.  If $\alpha_{q\rightarrow+\infty}=0$ then the upper bound is $\alpha\leqslant 2d$.
+%
+Furthermore, the symmetry relation in the singularity spectrum $f(\alpha)$ states that $0\leqslant \alpha \leqslant d$ and $d\leqslant \alpha \leqslant
+2d$ regions of the singularity spectrum must be related by the relation \eqref{eq-symfalfa}.  In other words, using \eqref{eq-symfalfa} one can be mapped onto another.  The symmetry axis $\alpha=d$ is exactly equivalent to $q=\frac{1}{2}$.
+
+
+Numerical calculations have since then supported this symmetry in  $f(\alpha)$ in the one-dimensional power-law random-banded-matrix model \cite{MirFME06} and the two-dimensional Anderson transition in the spin-orbit symmetry class \cite{ObuSFGL07} and SU2 model \cite{MilE07}.  In the present work we numerically verify that this symmetry in the singularity spectrum also holds in the three-dimensional (3D) Anderson model. In order to address this hypothesis with sufficient accuracy, we have considered the box- and system-size scaling of the typical and ensemble averages of $P_q$ in computing the $f(\alpha)$. We discuss which numerical strategy will produce the best possible agreement with the symmetry and we highlight the statistical analysis that must be used to observe the reported symmetries with sufficient confidence.
+%%%%%%%%%%
+%
+%
+% DISCUSS
+% benefits of symmetry
+% symmetry found to be true in critical acoustic waves, french guys, other non-Anderson analytical model
+%
+

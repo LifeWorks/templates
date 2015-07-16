@@ -1,0 +1,165 @@
+% Main Thesis File: This is the main file and it connects all the different parts of the thesis and compiles it into a single outcome file.
+
+\documentclass[onecolumn, 12 pt, doublespace, fullpage, letterpaper]{report}
+\renewcommand{\baselinestretch}{1.75}
+
+% Packages
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{color}
+\usepackage[cmex10]{amsmath}
+\usepackage{latexsym,amsfonts}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage[figuresright]{rotating}
+\usepackage{listings}
+
+\usepackage{fancyhdr}       
+\pagestyle{fancy} 
+\fancyhead{} \fancyfoot{} 
+\fancyhead[CO,CE]{\thepage}      
+\renewcommand{\headrulewidth}{0pt}
+
+
+\usepackage{setspace}
+\usepackage{subfigure}
+
+% ### Nomenclature, List of Abbreviations and List of Symbols 
+   \usepackage{ifthen,xkeyval,xfor,amsgen}
+   \usepackage[acronym,toc]{glossaries}
+   \newglossary[slg]{symbols}{syi}{sbl}{List of Symbols}
+   \makeglossaries
+   
+   \include{Lists}
+   % Run the following three lines in the command line to get the lists
+%makeindex -s Thesis.ist -t Thesis.alg -o Thesis.acr Thesis.acn
+%makeindex -s Thesis.ist -t Thesis.slg -o Thesis.syi Thesis.sbl
+%makeindex -s Thesis.ist -t Thesis.glg -o Thesis.gls Thesis.glo
+
+% ### End of addition
+
+\usepackage{hyperref} 
+
+
+% Modified commands
+\newcommand{\Tab}{\hspace{2ex}}
+\usepackage[lmargin=1.5in, rmargin=1in, vmargin=1in]{geometry}
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand\bibname{\centering BIBLIOGRAPHY}
+
+
+
+\begin{document}
+
+\vspace{2pt}
+\thispagestyle{empty}
+\addvspace{10mm}
+
+\begin{center}
+{\bf\Large Your Thesis Title}\vfill
+{\Large Thesis by}\\
+{\bf\Large Your Full Name, Your Latest Earned Degree Title}\vfill
+{\Large Submitted in Partial Fulfillment of the Requirements for the degree of}\\
+{\bf\Large Masters of Science/Doctor of Philosophy}\vfill
+{King Abdullah University of Science and Technology}\\\vspace{2pt}
+{Your Division Name}\\\vspace{2pt}
+{Your Program Name}\vfill
+%\maketitle
+{Thuwal, Makkah Province, Kingdom of Saudi Arabia}\\
+{Full Month, Year}\vfill
+
+\end{center}
+
+\newpage
+\noindent{The undersigned approve the thesis of Your Full Name}\vfill
+
+\begin{flushleft}
+\rule{15em}{1pt} \hfill \rule{10em}{1pt} \hfill \rule{6em}{1pt} \\\vspace{-5pt}
+\makebox[15em][l]{Dr. Committee Member 1 Name} \hfill \makebox[10em][l]{Signature} \hfill \makebox[6em][l]{Date}\\\vspace{-5pt}
+\makebox[15em][l]{Committee Member}\\\vspace{5em}
+
+\rule{15em}{1pt} \hfill \rule{10em}{1pt} \hfill \rule{6em}{1pt} \\\vspace{-5pt}
+\makebox[15em][l]{Dr. Committee Member 2 Name} \hfill \makebox[10em][l]{Signature} \hfill \makebox[6em][l]{Date}\\\vspace{-5pt}
+\makebox[15em][l]{Committee Member}\\\vspace{5em}
+
+\rule{15em}{1pt} \hfill \rule{10em}{1pt} \hfill \rule{6em}{1pt} \\\vspace{-5pt}
+\makebox[15em][l]{Dr. Advisor's Name} \hfill \makebox[10em][l]{Signature} \hfill \makebox[6em][l]{Date}\\\vspace{-5pt}
+\makebox[15em][l]{Committee Chair(Thesis Supervisor)}
+\end{flushleft}\vfill
+
+\begin{center}
+{King Abdullah University of Science and Technology}\\
+{Year}
+\end{center}
+
+\newpage
+\vspace*{\fill}
+\begin{center}
+{Copyright \copyright Year}\\
+{Your Full Name}\\
+{All Rights Reserved}
+\end{center}
+
+\include{Abstract}
+
+\include{Acknowledgment}
+
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\tableofcontents
+\cleardoublepage
+
+\printglossary[type=\acronymtype,style=long3col, title=List of Abbreviations, toctitle=List of Abbreviations, nonumberlist=true] 
+\printglossary[type=symbols,style=long3col, nonumberlist=true] 
+
+\renewcommand*\listfigurename{List of Illustrations} 
+\addcontentsline{toc}{chapter}{\listfigurename} 
+\listoffigures
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+% \printglossary[style=altlist,title=Nomenclature, toctitle=Nomenclature, nonumberlist=true] 
+
+\include{Introduction}
+\include{Chapter_2}
+\include{Chapter_3}
+\include{Chapter_4}
+\include{Chapter_5}
+\include{Conclusion}
+
+\appendix
+
+\begin{center}
+\vspace*{\fill}
+\thispagestyle{empty} 
+{\bf\Huge\centering{APPENDICES}}
+\addcontentsline{toc}{chapter}{Appendices}
+\vspace*{\fill}
+\end{center}
+
+\include{Appendix_A}
+
+\include{Appendix_B}
+
+\include{Papers}
+
+\renewcommand*\bibname{Bibliography/References} 
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+
+
+\end{document}
+
+% Copyright 2010 Imran Shafique Ansari
+% Contact Email: imran.ansari@kaust.edu.sa
+% Contact Number: +966 59 897 1005

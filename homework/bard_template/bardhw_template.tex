@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%bardhw_template.tex%%%%%%
+%%
+%% This is a template for the Bard Homework Style.
+%%
+%% Copy it to a new file with a new name and use it as the basis
+%% for your Bard homework.
+%%
+%% Replace everything inside <   > with the appropriate text,
+%% and remove the <   >.
+%%
+%% Put a comment symbol (%) before anything in the template you 
+%% do not need.
+%%
+%% Add as many additional exercises, proofs, answers, etc.
+%% as you need.
+%%
+%% Read the manual bardhw_man.tex or bardhw_man.pdf 
+%% for more details regarding the Bard Homework Style.
+%%
+%% The Bard Homework Style file and the manual for this style file
+%% can be found at http://math.bard.edu/bloch/bardtex.htm
+%%
+%% For additional help, or for suggestions or corrections,
+%% contact Ethan Bloch at bloch@bard.edu
+%%
+%%%%%%%%%%%%Bard Homework Style %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt, oneside, reqno]{article}
+\usepackage{amssymb, amsthm, amsmath, amsfonts}
+\usepackage{bardhw}
+
+%<Your macros, if you have any>
+\usepackage[dvips]{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+
+\hwinfo{Song Feng}{<Course>}{<Date>}
+
+\doublespace
+
+
+
+\end{document}
+
+%%%% instructions
+\exer{} ... \eexer   %% The description of problems(fill with exercise number)
+\exernum{} ... \eexernum %% (Exercise number only)
+\ans{} ... \eans %% Answer with number
+\solnum{} ... \esolnum %% Solution only with number
+\sol ... \esol %% Solution
+\demonum{} ... \edemonum %% Proof only with number
+\demo ... \edemo %% Proof
+\prob{} ... \eprob %% (Problem)
+\lem{} ... \elem %% (Lemma)
+\thm{} ... \ethm %% (Theorem)
+\prop{} ... \eprop %% (Proposition)
+\conj{} ... \econj %% (Conjecture)
+\expl{} ... \eexpl %% (Example)
+\remk{} ... \eremk %%  (Remark)
+\alg{} ... \ealg %% (Algorithm)
+\defn{} ... \edefn %% (Definition)
+
+
+% include figures
+
+\begin{figure}
+\setcaptionwidth{4in}
+\renewcommand{\captionfont}{\small \monospace}
+\renewcommand{\captionlabelfont}{\normalsize \serif}
+\centering
+\includegraphics[width=5in]{<figure-name>}
+\caption{}\label{fig:<figure-label>}
+\end{figure}
+
+
+% include pragram scripts
+
+\lstinputlisting{test.m}

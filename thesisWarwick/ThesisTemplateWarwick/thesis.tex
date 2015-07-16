@@ -1,0 +1,109 @@
+%input macros (i.e. write your own macros file called MacroFile1.tex)
+%\include{Macros/MacroFile1}
+
+\documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
+\usepackage{epsfig, multirow, subfigure, amssymb, amsmath, booktabs, rotating, setspace}
+\usepackage{algorithm, algorithmic,tweaklist, color, multicol,txfonts,subfig, float}
+%\usepackage[T1]{fontenc}
+\usepackage[section]{placeins}
+\normalfont
+%\usepackage[square]{natbib}
+\citestyle{plain}
+%\bibpunct{[}{]}{;}{a}{,}{;} % change parent braces to square braces
+\renewcommand\floatpagefraction{1}
+\renewcommand\dblfloatpagefraction{1}
+\renewcommand\dbltopfraction{1}
+\renewcommand\topfraction{1}
+\renewcommand\bottomfraction{1}
+\renewcommand{\dbltopfraction}{1}
+\renewcommand{\topfraction}{1}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+\setcounter{dbltopnumber}{50}
+
+
+\title{}
+
+  \author{}
+  \collegeordept{Department of Computer Science}
+  \university{University of Warwick}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+ \crest{\includegraphics[bb = 0 0 292 336, width=30mm]{crest_fullcolour}}
+
+%
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of Philosophy}
+\degreedate{March, 2009}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% Put all the style files you want in the directory StyleFiles and usepackage like this:
+\usepackage{StyleFiles/watermark}
+
+\begin{document}
+
+%\language{english}
+
+\onehalfspacing
+% A page with the abstract on including title and author etc may be
+% required to be handed in separately. If this is not so, then comment
+% the below 3 lines (between '\begin{abstractseparte}' and
+% 'end{abstractseparate}'), normally like a declaration ... needs some more
+% work, mind as environment abstracts creates a new page!
+% \begin{abstractseparate}
+%   \input{Abstract/abstract}
+% \end{abstractseparate}
+
+\maketitle
+
+%\renewcommand{\baselinestretch}{1.66}
+%\renewcommand\baselinestretch{2}
+%\baselineskip=18pt plus1pt
+
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\frontmatter
+\doublespacing
+
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+\addcontentsline{toc}{chapter}{Abbreviations}
+
+\input{Acknowledgement/acknowledgement}
+\input{Dedication/dedication}
+\input{Abstract/abstract}
+\input{Statement/statement}
+\input{Publications/publications}
+\input{Abbreviations/abbreviations}
+%\printnomenclature  %% Print the nomenclature (abbreviations)
+
+
+% published work
+\mainmatter
+\doublespacing
+\include{Introduction/introduction}
+\include{Chapter1/chapter1}
+\include{Chapter2/chapter2}
+\include{Chapter3/chapter3}
+\include{Conclusions/conclusions}
+\appendix
+\include{Appendix1/appendix1}
+\include{Appendix2/appendix2}
+
+%\bibliographystyle{Classes/jmb}
+%\bibliographystyle{plainnat} %this works with package natbib
+%\bibliographystyle{plain}
+\bibliographystyle{natbib} % bibliography style
+\renewcommand{\bibname}{References} % changes default name Bibliography to References
+\bibliography{...} % References file
+\addcontentsline{toc}{chapter}{References} %adds References to contents page
+\end{document}
